@@ -5,6 +5,7 @@
 #include "nr_dictionary.h"
 #include "nr_socket.h"
 #include "nr_thread.h"
+#include <time.h>
 
 void recv_callback(int sock, char* data);
 void handle_client(int sock, struct sockaddr_in addr);
@@ -16,6 +17,13 @@ typedef struct nr_socket_args {
 };
 
 void main() {
+    srand(time(NULL));
+    int i;
+    for (i = 0; i < 100; i++)
+        printf("NUM: %d\n", rand());
+}
+
+void main5() {
     int socket = nr_socket_create();
     int result = nr_socket_bind(socket, "0.0.0.0", 80);
     if (result != 0) {
