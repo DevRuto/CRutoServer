@@ -15,6 +15,9 @@
 #ifndef SOCKET
 #define SOCKET int
 #endif
+#ifndef SOCKET_ERROR
+#define SOCKET_ERROR	(-1)
+#endif
 /* Assume that any non-Windows platform uses POSIX-style sockets instead. */
   #include <sys/socket.h>
   #include <arpa/inet.h>
