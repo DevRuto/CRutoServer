@@ -6,6 +6,10 @@
 #include "nr_thread.h"
 #include <time.h>
 
+#ifndef INVALID_SOCKET
+#define INVALID_SOCKET (SOCKET)(~0)
+#endif
+
 void recv_callback(int sock, char* data);
 void handle_client(int sock, struct sockaddr_in addr);
 void thread_callback(void* args);
