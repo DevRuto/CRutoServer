@@ -12,6 +12,9 @@
 #include <Ws2tcpip.h>
 #pragma comment (lib, "Ws2_32.lib")
 #else
+#ifndef SOCKET
+#define SOCKET int
+#endif
 /* Assume that any non-Windows platform uses POSIX-style sockets instead. */
   #include <sys/socket.h>
   #include <arpa/inet.h>
