@@ -1,7 +1,6 @@
 #include<stdio.h>
-#include <mem.h>
 #include <stdlib.h>
-#include <afxres.h>
+//#include <afxres.h>
 #include "nr_dictionary.h"
 #include "nr_socket.h"
 #include "nr_thread.h"
@@ -16,16 +15,16 @@ typedef struct nr_socket_args {
     struct sockaddr_in addr;
 };
 
-void main() {
+void main90() {
     srand(time(NULL));
     int i;
     for (i = 0; i < 100; i++)
         printf("NUM: %d\n", rand());
 }
 
-void main5() {
+void main() {
     int socket = nr_socket_create();
-    int result = nr_socket_bind(socket, "0.0.0.0", 80);
+    int result = nr_socket_bind(socket, "0.0.0.0", 810);
     if (result != 0) {
         puts("Error binding\n");
         return;

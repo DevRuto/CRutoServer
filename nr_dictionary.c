@@ -1,6 +1,6 @@
 #include <stddef.h>
 #include <malloc.h>
-#include <mem.h>
+#include <string.h>
 #include "nr_dictionary.h"
 
 void nr_dictionary_realloc(nr_dictionary_t *dict) {
